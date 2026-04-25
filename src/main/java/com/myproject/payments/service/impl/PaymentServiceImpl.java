@@ -21,13 +21,13 @@ public class PaymentServiceImpl implements PaymentService {
 
 	@Override
 	public String createPayment(CreatePaymentReq createPaymentReq) {
-		log.info("Creating payment...");
+		log.info("Creating payment request createPaymentReq: {}", createPaymentReq);
 		
 		HttpRequest httpRequest = createPaymentHelper.prepareStripeCreateSessionRequest(createPaymentReq);
 		
 		String httpResponse = httpServiceEngine.makeHttpCall(httpRequest);
 		
-		log.info("getting response from http call: {}", httpResponse);
+		log.info("getting response from http call httpResponse: {}", httpResponse);
 		return httpResponse;
 	}
 

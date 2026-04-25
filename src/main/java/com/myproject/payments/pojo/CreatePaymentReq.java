@@ -7,5 +7,7 @@ import lombok.Data;
 @Data
 public class CreatePaymentReq {
 	
+	String successUrl;
+	String cancelUrl;
 	List<LineItem> lineItems;
 }

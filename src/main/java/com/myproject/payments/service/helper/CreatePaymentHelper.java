@@ -38,8 +38,8 @@ public class CreatePaymentHelper {
 		MultiValueMap<String, String> formdata = new LinkedMultiValueMap<>();
 
 		formdata.add(Constant.CREATE_SESSION_MODE, "payment");
-		formdata.add(Constant.CREATE_SESSION_SUCCESS_URL, "https://example.com/success");
-		formdata.add(Constant.CREATE_SESSION_CANCEL_URL, "https://example.com/cancel");
+		formdata.add(Constant.CREATE_SESSION_SUCCESS_URL, createPaymentReq.getSuccessUrl());
+		formdata.add(Constant.CREATE_SESSION_CANCEL_URL, createPaymentReq.getCancelUrl());
 		
 //		formdata.add("line_items[0][price_data][currency]", "EUR");
 //		formdata.add("line_items[0][quantity]", "2");
